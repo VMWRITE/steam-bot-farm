@@ -42,3 +42,19 @@ client.on('webSession', (sessionid, cookies) => {
     community.setCookies(cookies);
     community.startConfirmationChecker(15000, process.env.identity);
 });
+
+process.on('SIGINT', function() {
+	console.log("Logging off...");
+	shutdown();
+});
+
+function shutdown(code) {
+	client.logOff();
+	client.once('disconnected', function() {
+		process.exit(code);
+	});
+
+	setTimeout(function() {
+		process.exit(code);
+	}, 500);
+}
