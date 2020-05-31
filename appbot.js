@@ -31,19 +31,7 @@ client.on('loggedOn', () => {
 });
 
 client.on("friendOrChatMessage", function(steamID, message, room) {
-	if (steamID == "76561198151537298" && message == "!automsg"){
-		if (automsgs) {
-			automsgs = false
-			client.chatMessage(steamID, "Auto msgs disabled");
-		}else{
-			automsgs = true
-			client.chatMessage(steamID, "Auto msgs enabled");
-		}
-	}
-});
-
-client.on("friendMessage", function(steamID, message) {
-	if (steamID == "76561198144217938" && message == "!automsg"){
+	if (steamID == "76561197965418880" && message == "!automsg"){
 		if (automsgs) {
 			automsgs = false
 			client.chatMessage(steamID, "/code ＡＵＴＯ　ＭＥＳＳＡＧＥＳ　ＤＩＳＡＢＬＥＤ．");
@@ -52,6 +40,9 @@ client.on("friendMessage", function(steamID, message) {
 			client.chatMessage(steamID, "/code ＡＵＴＯ　ＭＥＳＳＡＧＥＳ　ＥＮＡＢＬＥＤ．");
 		}
 	}
+});
+
+client.on("friendMessage", function(steamID, message) {
     if (message && automsgs) {
         client.chatMessage(steamID, "Hello, im Ro-Bot-OZ. Ozaron cant talk with you now because he's sleeping. :steambored: Enter a message in comments, thank you.");
 		client.chatMessage(steamID, "/sticker " + randomgifs[Math.floor( Math.random() * randomgifs.length )]);
