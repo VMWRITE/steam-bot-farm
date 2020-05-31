@@ -19,8 +19,8 @@ const logOnOptions = {
 
     twoFactorCode: SteamTopt.generateAuthCode(process.env.shared),
 };
-var randomgifs = ["Winter2019BirdPlop", "Winter2019CocoaCheers", "Winter2019SaltShaker", "Winter2019SnowmanGoodbye"]
-awesomegif = Math.floor( Math.random() * randomgifs.length );
+var randomgifs = ["Winter2019BirdPlop", "Winter2019CocoaCheers", "Winter2019SaltShaker", "Winter2019SnowmanGoodbye"];
+
 client.logOn(logOnOptions);
 
 client.on('loggedOn', () => {
@@ -32,7 +32,7 @@ client.on('loggedOn', () => {
 client.on("friendMessage", function(steamID, message) {
     if (message) {
         client.chatMessage(steamID, "Hello, im Ro-Bot-OZ. Ozaron cant talk with you now because he's sleeping. :steambored: Enter a message in comments, thank you.");
-		client.chatMessage(steamID, "/sticker " + array[awesomegif]);
+		client.chatMessage(steamID, "/sticker " + array[Math.floor( Math.random() * randomgifs.length )]);
 		console.log(message);
     }
 });
