@@ -1,1 +1,1 @@
-worker node appbot.js
+worker: node appbot.js
