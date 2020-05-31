@@ -20,6 +20,7 @@ const logOnOptions = {
     twoFactorCode: SteamTopt.generateAuthCode(process.env.shared),
 };
 var randomgifs = ["Winter2019BirdPlop", "Winter2019CocoaCheers", "Winter2019SaltShaker", "Winter2019SnowmanGoodbye"];
+var automsgs = false
 
 client.logOn(logOnOptions);
 
@@ -30,10 +31,18 @@ client.on('loggedOn', () => {
 });
 
 client.on("friendMessage", function(steamID, message) {
-    if (message) {
+	if (steamID == "76561198144217938" && message == "!automsg"){
+		if (automsg) {
+			automsg = false
+			client.chatMessage(steamID, "Auto msgs disabled");
+		}else{
+			automsg = true
+			client.chatMessage(steamID, "Auto msgs enabled");
+		}
+	}
+    if (message && automsgs) {
         client.chatMessage(steamID, "Hello, im Ro-Bot-OZ. Ozaron cant talk with you now because he's sleeping. :steambored: Enter a message in comments, thank you.");
 		client.chatMessage(steamID, "/sticker " + randomgifs[Math.floor( Math.random() * randomgifs.length )]);
-		console.log(message);
     }
 });
 
