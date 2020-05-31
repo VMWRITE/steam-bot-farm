@@ -30,7 +30,6 @@ client.on('loggedOn', () => {
     client.setPersona(SteamUser.EPersonaState.Online);
     client.gamesPlayed(config.games);
 });
-
 client.on("friendMessage", function(steamID, message) {
     if (message) {
         client.chatMessage(steamID, "Hello, im Ro-Bot-OZ. I cant talk with you now because i'm sleeping. :steambored: Enter a message in comments, thank you.");
@@ -38,7 +37,6 @@ client.on("friendMessage", function(steamID, message) {
 		console.log(message);
     }
 });
-
 client.on('webSession', (sessionid, cookies) => {
     manager.setCookies(cookies);
 
