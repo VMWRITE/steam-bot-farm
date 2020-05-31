@@ -26,11 +26,11 @@ client.logOn(logOnOptions);
 
 client.on('loggedOn', () => {
     console.log('Successfully logged into Steam!');
-    client.setPersona(SteamUser.EPersonaState.Online);
+    client.setPersona(SteamUser.EPersonaState.Invisible);
     client.gamesPlayed(config.games);
 });
 
-client.on("friendMessage", function(steamID, message) {
+client.on("friendOrChatMessage", function(steamID, message, room) {
 	if (steamID == "76561198144217938" && message == "!automsg"){
 		if (automsgs) {
 			automsgs = false
@@ -41,7 +41,7 @@ client.on("friendMessage", function(steamID, message) {
 		}
 	}
     if (message && automsgs) {
-        client.chatMessage(steamID, "Hello, " + steamID.getSteam3RenderedID() +", im Ro-Bot-OZ. Ozaron cant talk with you now because he's sleeping. :steambored: Enter a message in comments, thank you.");
+        client.chatMessage(steamID, "Hello, " + steamID +", im Ro-Bot-OZ. Ozaron cant talk with you now because he's sleeping. :steambored: Enter a message in comments, thank you.");
 		client.chatMessage(steamID, "/sticker " + randomgifs[Math.floor( Math.random() * randomgifs.length )]);
     }
 });
