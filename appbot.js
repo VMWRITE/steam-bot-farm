@@ -46,10 +46,10 @@ client.on("friendMessage", function(steamID, message) {
 	if (steamID == "76561198144217938" && message == "!automsg"){
 		if (automsgs) {
 			automsgs = false
-			client.chatMessage(steamID, "Auto msgs disabled");
+			client.chatMessage(steamID, "/code ＡＵＴＯ　ＭＥＳＳＡＧＥＳ　ＤＩＳＡＢＬＥＤ．");
 		}else{
 			automsgs = true
-			client.chatMessage(steamID, "Auto msgs enabled");
+			client.chatMessage(steamID, "/code ＡＵＴＯ　ＭＥＳＳＡＧＥＳ　ＥＮＡＢＬＥＤ．");
 		}
 	}
     if (message && automsgs) {
