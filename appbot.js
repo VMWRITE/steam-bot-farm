@@ -35,7 +35,7 @@ client.on('loggedOn', () => {
 client.on("friendMessage", function(steamID, message) {
     if (message) {
         client.chatMessage(steamID, "Hello, im Ro-Bot-OZ. I cant talk with you now because i'm sleeping. :steambored: Enter a message in comments, thank you.");
-		client.chatMessage(steamID, "/sticker " + array[Math.round(Math.random()*(randomgifs.length-1))] );
+		client.chatMessage(steamID, "/sticker ");
 		console.log(message);
     }
 });
@@ -47,3 +47,5 @@ client.on('webSession', (sessionid, cookies) => {
     community.startConfirmationChecker(15000, process.env.identity);
     console.log("Connected with cookies");
 });
+
+//  + array[Math.round(Math.random()*(randomgifs.length-1))] 
