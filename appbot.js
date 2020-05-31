@@ -24,7 +24,6 @@ const logOnOptions = {
 };
 
 var randomgifs = ["Winter2019BirdPlop", "Winter2019CocoaCheers", "Winter2019SaltShaker", "Winter2019SnowmanGoodbye"]
-awesomegif = Math.floor( Math.random() * randomgifs.length );
 client.logOn(logOnOptions);
 
 client.on('loggedOn', () => {
@@ -36,7 +35,7 @@ client.on('loggedOn', () => {
 client.on("friendMessage", function(steamID, message) {
     if (message) {
         client.chatMessage(steamID, "Hello, im Ro-Bot-OZ. I cant talk with you now because i'm sleeping. :steambored: Enter a message in comments, thank you.");
-		client.chatMessage(steamID, "/sticker " + array[awesomegif]);
+		client.chatMessage(steamID, "/sticker " + randomgifs[Math.round(Math.random()*(randomgifs.length-1))]);
 		console.log(message);
     }
 });
