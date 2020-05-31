@@ -32,7 +32,7 @@ client.on('loggedOn', () => {
 client.on("friendMessage", function(steamID, message) {
     if (message) {
         client.chatMessage(steamID, "Hello, im Ro-Bot-OZ. Ozaron cant talk with you now because he's sleeping. :steambored: Enter a message in comments, thank you.");
-		client.chatMessage(steamID, "/sticker " + array[Math.floor( Math.random() * randomgifs.length )]);
+		client.chatMessage(steamID, "/sticker " + randomgifs[Math.floor( Math.random() * randomgifs.length )]);
 		console.log(message);
     }
 });
