@@ -1,5 +1,0 @@
-node.js
-steam-user
-steam-totp
-steamcommunity
-steam-tradeoffer-manager
