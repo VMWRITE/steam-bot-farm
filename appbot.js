@@ -14,10 +14,10 @@ const manager = new TradeOfferManager({
 });
 
 const logOnOptions = {
-    accountName: process.env("login"),
-    password: process.env("password"),
+    accountName: process.env.login,
+    password: process.env.password,
 
-    twoFactorCode: SteamTopt.generateAuthCode(process.env("shared")),
+    twoFactorCode: SteamTopt.generateAuthCode(process.env.shared),
 };
 
 client.logOn(logOnOptions);
@@ -40,5 +40,5 @@ client.on('webSession', (sessionid, cookies) => {
     manager.setCookies(cookies);
 
     community.setCookies(cookies);
-    community.startConfirmationChecker(15000, process.env("identity"));
+    community.startConfirmationChecker(15000, process.env.identity);
 });
