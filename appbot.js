@@ -32,11 +32,11 @@ client.on('loggedOn', () => {
 
 client.on("friendMessage", function(steamID, message) {
 	if (steamID == "76561198144217938" && message == "!automsg"){
-		if (automsg) {
-			automsg = false
+		if (automsgs) {
+			automsgs = false
 			client.chatMessage(steamID, "Auto msgs disabled");
 		}else{
-			automsg = true
+			automsgs = true
 			client.chatMessage(steamID, "Auto msgs enabled");
 		}
 	}
