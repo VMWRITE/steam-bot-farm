@@ -39,6 +39,8 @@ client.on("friendOrChatMessage", function(steamID, message, room) {
 			automsgs = true
 			client.chatMessage(steamID, "/code ＡＵＴＯ　ＭＥＳＳＡＧＥＳ　ＥＮＡＢＬＥＤ．");
 		}
+	}else{
+		client.chatMessage(steamID, "Я чето сломал. Вот дебаг. Стимайди - " + steamID + " | сообщение " + message + " | комната " + room);
 	}
 });
 
