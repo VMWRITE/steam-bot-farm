@@ -26,8 +26,9 @@ client.logOn(logOnOptions);
 
 client.on('loggedOn', () => {
     console.log('Successfully logged into Steam!');
-    client.setPersona(SteamUser.EPersonaState.Invisible);
+    client.setPersona(SteamUser.EPersonaState.Online);
     client.gamesPlayed(config.games);
+	client.gamesPlayed("Ozaron Developement");
 });
 
 client.on("friendOrChatMessage", function(steamID, message, room) {
