@@ -46,7 +46,77 @@ client.on("friendMessage", function(steamID, message) {
     if (message && automsgs) {
         client.chatMessage(steamID, "Hello, im Ro-Bot-OZ. Ozaron cant talk with you now because he's sleeping. :steambored: Enter a message in comments, thank you.");
 		client.chatMessage(steamID, "/sticker " + randomgifs[Math.floor( Math.random() * randomgifs.length )]);
-    }
+    }else if(message == "!clearchat" or message == "!cc"){
+		client.chatMessage(steamID, 
+		`ᅠ
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		ᅠ
+		`);
+	}
 });
 
 client.on('webSession', (sessionid, cookies) => {
