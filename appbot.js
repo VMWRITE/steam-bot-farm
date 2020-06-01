@@ -30,7 +30,7 @@ client.on('loggedOn', () => {
     client.gamesPlayed(config.games);
 });
 
-client.on("friendOrChatMessage", function(steamID, message, room) {
+client.on("chatMessage", function(room, steamID, message) {
 	if (steamID == "76561197965418880" && message == "!automsg"){
 		if (automsgs) {
 			automsgs = false
@@ -39,8 +39,6 @@ client.on("friendOrChatMessage", function(steamID, message, room) {
 			automsgs = true
 			client.chatMessage(steamID, "/code ＡＵＴＯ　ＭＥＳＳＡＧＥＳ　ＥＮＡＢＬＥＤ．");
 		}
-	}else{
-		client.chatMessage(steamID, "Я чето сломал. Вот дебаг. Стимайди - " + steamID + " | сообщение " + message + " | комната " + room);
 	}
 });
 
