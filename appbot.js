@@ -38,6 +38,8 @@ client.on("chatMessage", function(room, steamID, message) {
 		}else{
 			automsgs = true
 			client.chatMessage(steamID, "/code ＡＵＴＯ　ＭＥＳＳＡＧＥＳ　ＥＮＡＢＬＥＤ．");
+		}else{
+			console.log(room + " | " + steamID + " | " + message + " ");
 		}
 	}
 });
