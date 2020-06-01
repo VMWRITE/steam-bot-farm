@@ -19,8 +19,16 @@ const logOnOptions = {
 
     twoFactorCode: SteamTopt.generateAuthCode(process.env.shared),
 };
+
 var randomgifs = ["Winter2019BirdPlop", "Winter2019CocoaCheers", "Winter2019SaltShaker", "Winter2019SnowmanGoodbye"];
+var randomgames = ["[AFK-BOT]", "https://discord.gg/sD4spb3", "https://github.com/OzaronZ/", "Ozaron.#5101", "[BOT]", "[FARMING]"];
 var automsgs = false
+
+
+function randomGame() {
+  client.gamesPlayed(randomgames[Math.floor( Math.random() * randomgames.length )])
+}
+setInterval(randomGame, 5000);
 
 client.logOn(logOnOptions);
 
@@ -28,7 +36,6 @@ client.on('loggedOn', () => {
     console.log('Successfully logged into Steam!');
     client.setPersona(SteamUser.EPersonaState.Online);
     client.gamesPlayed(config.games);
-	client.gamesPlayed("Ozaron Developement");
 });
 
 client.on("friendOrChatMessage", function(steamID, message, room) {
