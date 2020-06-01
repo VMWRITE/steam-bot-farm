@@ -21,15 +21,15 @@ const logOnOptions = {
 };
 
 var randomgifs = ["Winter2019BirdPlop", "Winter2019CocoaCheers", "Winter2019SaltShaker", "Winter2019SnowmanGoodbye"];
-var randomgames = ["[AFK-BOT]", "https://discord.gg/sD4spb3", "https://github.com/OzaronZ/", "Ozaron.#5101", "[BOT]", "[FARMING]"];
 var automsgs = false
 
-
+/*
+var randomgames = ["AFK-BOT", "https://discord.gg/sD4spb3", "https://github.com/OzaronZ/", "Ozaron.#5101", "Farm"];
 function randomGame() {
   client.gamesPlayed(randomgames[Math.floor( Math.random() * randomgames.length )])
 }
-setInterval(randomGame, 5000);
-
+setInterval(randomGame, 60000);
+*/
 client.logOn(logOnOptions);
 
 client.on('loggedOn', () => {
