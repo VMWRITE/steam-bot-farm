@@ -9,7 +9,7 @@
     "readline-sync": "^1.4.10",
     "steam-tradeoffer-manager": "^2.10.2",
     "steam-user": "^4.15.5",
-    "steamcommunity": "^3.41.4",
+    "steamcommunity": "^3.41.4"
   },
   "devDependencies": {},
   "scripts": {
