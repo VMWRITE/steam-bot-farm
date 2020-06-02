@@ -1,14 +1,15 @@
 {
   "name": "steambot",
   "version": "1.0.0",
-  "description": "https://github.com/Emberdot/vienna-bot/",
+  "description": "https://github.com/OzaronZ/steam-bot-farm/",
   "main": "appbot.js",
   "dependencies": {
     "chalk": "^4.0.0",
+    "discord-webhook-node": "^1.0.7",
     "readline-sync": "^1.4.10",
-    "steam-user": "^4.15.5",
     "steam-tradeoffer-manager": "^2.10.2",
-    "steamcommunity": "^3.41.4"
+    "steam-user": "^4.15.5",
+    "steamcommunity": "^3.41.4",
   },
   "devDependencies": {},
   "scripts": {
@@ -19,7 +20,7 @@
     "url": "git+https://github.com/OzaronZ/steam-bot-farm.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ozaron",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/OzaronZ/steam-bot-farm/issues"
