@@ -46,8 +46,8 @@ client.on('friendRelationship', (steamid, relationship) => {
 
 client.on("friendOrChatMessage", function(steamID, message, room) {
 	if (steamID == "76561198144217938"){
-	  if (message == "!automsg")
-client.chatMessage(steamID,SteamTopt.generateAuthCode(process.env.shared));
+	  if (message == "!automsg"){
+client.chatMessage(steamID,SteamTopt.generateAuthCode(process.env.shared) );
 		if (automsgs) {
 			automsgs = false
 			client.chatMessage(steamID, "/code ＡＵＴＯ　ＭＥＳＳＡＧＥＳ　ＤＩＳＡＢＬＥＤ．");
