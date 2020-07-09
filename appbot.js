@@ -3,12 +3,10 @@ const config = require('./config.json');
 const SteamUser = require('steam-user'),
     SteamTopt = require('steam-totp'),
     SteamCommunity = require('steamcommunity'),
-	webhook = require('discord-webhook-node'),
     TradeOfferManager = require('steam-tradeoffer-manager');
 
 const client = new SteamUser(),
-    community = new SteamCommunity(),
-	hook = new webhook.Webhook(process.env.webhook);
+    community = new SteamCommunity();
 	
 const manager = new TradeOfferManager({
     steam: client,
@@ -66,12 +64,7 @@ client.chatMessage(steamID,SteamTopt.generateAuthCode(process.env.shared) );
 	  }
 	}
 });
-client.on("friendMessage", function(steamID, message) {
-	if (message){
-	community.getSteamUser(steamID, function (err, user){
-		hook.send("[ ***" + user.name + "*** | **" + steamID + "** ]: `" + message + "`");
-	});
-	}
+client.on("friendMessage", function(steamID, message) 
     if (message && automsgs) {
         client.chatMessage(steamID, "Hello, im Ro-Bot-OZ. Ozaron cant talk with you now because he's sleeping. :steambored: Enter a message in comments, thank you.");
 		client.chatMessage(steamID, "/sticker " + randomgifs[Math.floor( Math.random() * randomgifs.length )]);
